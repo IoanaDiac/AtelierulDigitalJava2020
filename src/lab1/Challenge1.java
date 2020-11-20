@@ -14,6 +14,12 @@ public class Challenge1 {
             if( i % 5 == 0){
                 System.out.print("buzz");
             }
+            if( i % 7 == 0){
+                System.out.print("Rizz");
+            }
+            if( i % 11 == 0){
+                System.out.print("Jazz");
+            }
             System.out.print(", ");
         }
     }
