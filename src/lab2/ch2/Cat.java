@@ -1,13 +1,13 @@
-package lab2.ch1.ch2;
+package lab2.ch2;
 
 public class Cat extends Animal implements Pet {
     private String name;
-
 
     public Cat(String name){
         super(4);
         this.name = name;
     }
+
     public Cat(){
         super(4);
     }
@@ -15,8 +15,9 @@ public class Cat extends Animal implements Pet {
     public void setName(String name){
         this.name=name;
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return name;
     }
 

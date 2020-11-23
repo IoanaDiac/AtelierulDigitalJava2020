@@ -1,4 +1,4 @@
-package lab2.ch1.ch2;
+package lab2.ch2;
 
 public class Spider extends Animal{
     public Spider(){
@@ -7,6 +7,6 @@ public class Spider extends Animal{
 
     public void eat(){
         super.eat();
-        System.out.println(" like a spider0");
+        System.out.print(" like a spider.");
     }
 }
