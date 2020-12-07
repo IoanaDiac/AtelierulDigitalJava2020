@@ -8,15 +8,14 @@ public class Teacher implements ObservedSubject{
 
     @Override
     public void register(Observer obj) {
-        this.observers.add(obj);
+        observers.add(obj);
     }
 
     @Override
     public void unregister(Observer obj) {
-        for(Observer observer:observers){
-            int index = observers.indexOf(obj);
-            System.out.println("Removed student " + obj);
-            this.observers.remove(index);
+        int i=observers.indexOf(obj);
+        if(i>=0) {
+            observers.remove(i);
         }
     }
 
