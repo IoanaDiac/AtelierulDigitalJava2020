@@ -7,15 +7,12 @@ import java.util.Scanner;
 
 public class Anagram {
     private String[] words=new String[0];
-    private String[] permutations=new String[0];
-    private int count=0;
-    private int countp=0;
     private String anagramWord;
-
 
     public Anagram(String text, String anagramWord){
         try{
             String word;
+            int count=0;
             Scanner scanner = new Scanner(new BufferedReader(new FileReader(text)));
             while (scanner.hasNext()){
                 word = scanner.next();
@@ -29,46 +26,24 @@ public class Anagram {
         this.anagramWord=anagramWord;
     }
 
-    private void printPermutn(String str, String ans)
-    {
-
-        // If string is empty
-        if (str.length() == 0) {
-            permutations = Arrays.copyOf(permutations, permutations.length + 1);
-            permutations[countp]=ans;
-            countp++;
-            return;
-        }
-
-        for (int i = 0; i < str.length(); i++) {
-
-            // ith character of str
-            char ch = str.charAt(i);
-
-
-            // Rest of the string after excluding
-            // the ith character
-            String ros = str.substring(0, i) +
-                    str.substring(i + 1);
-
-            // Recurvise call
-            printPermutn(ros, ans + ch);
-        }
+    private String sortLetters(String word){
+        char tempArray[] = word.toCharArray();
+        Arrays.sort(tempArray);
+        return new String(tempArray);
     }
 
     public void displayAnagram(){
-
-        printPermutn(anagramWord,"");
-
-        for(String permutation:permutations){
-            for(String word:words){
-                if(permutation.equals(word)){
-                    System.out.println(word);
-                }
+        String sortedWord=sortLetters(anagramWord);
+        for(String word:words){
+            String sort=sortLetters(word);
+            if(sort.equals(sortedWord)){
+                System.out.println(word);
             }
         }
+        sortLetters(anagramWord);
 
-        }
+
     }
+}
 
 
