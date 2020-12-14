@@ -32,7 +32,7 @@ public class Anagram {
         return new String(tempArray);
     }
 
-    public void displayAnagram(){
+    public void findAnagram(){
         String sortedWord=sortLetters(anagramWord);
         for(String word:words){
             String sort=sortLetters(word);
@@ -41,8 +41,6 @@ public class Anagram {
             }
         }
         sortLetters(anagramWord);
-
-
     }
 }
 
