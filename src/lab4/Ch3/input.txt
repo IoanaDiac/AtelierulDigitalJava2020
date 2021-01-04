@@ -64392,7 +64392,7 @@ companionway
 companionways
 compar
 comparability
-comparable
+lab6.lab6.comparable.comparable
 comparableness
 comparably
 comparascope
