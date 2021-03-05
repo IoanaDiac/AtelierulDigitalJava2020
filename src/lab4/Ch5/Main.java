@@ -27,7 +27,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Occurrence occurrence = new Occurrence("./src/lab4/ch5/input.txt");
+        Occurrence occurrence = new Occurrence("./src/lab4/lab9.ch5/input.txt");
         System.out.println(occurrence.toString());
         HashMap<String, Integer> sortedOccurrence = sortByValue(occurrence.getWordOccurrence());
 
